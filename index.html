@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Pavin Mathew</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Source+Code+Pro:wght@300;400&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="container-overlay"></div>
+      <nav>
+        <ul>
+          <li><a class="nav-link" id="top-link" href="#top">Top</a></li>
+          <li>
+            <a class="nav-link" id="projects-link" href="#projects">Projects</a>
+          </li>
+          <li>
+            <a class="nav-link" id="contact-link" href="#contact">Contact</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/assets/2020-resume.pdf" target="_blank"
+              >Resume</a
+            >
+          </li>
+
+          <li>
+            <a class="lang jp" href="#about">日本語</a>
+            <span style="color: gray">|</span>
+            <a class="lang en active" href="#about">English</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="top">
+        <div class="top-image">
+          <pre style="white-space: pre-wrap">
+          <code>
+            <span style="color:rgb(171, 75, 184)">class</span> <span style="color: rgb(211, 61, 35);">WebDeveloper</span> {
+                <span style="color:rgb(171, 75, 184)" >constructor</span>(<span>firstName</span>, <span>lastName</span>, <span>skills</span>) {
+                    <span style="color: rgb(211, 61, 35);">this</span>.<span>firstName</span> = <span style="color: rgb(211, 61, 35);">this</span>.<span>firstName</span>;
+                    <span style="color: rgb(211, 61, 35);">this</span>.<span>lastName</span> = <span style="color: rgb(211, 61, 35);">this</span>.<span>lastName</span>;
+                    <span style="color: rgb(211, 61, 35);">this</span>.<span>skills</span> = <span style="color: rgb(211, 61, 35);">this</span>.<span>skills</span>;
+                }
+            }
+
+            <span style="color:rgb(171, 75, 184)" >const</span> <span style="color: rgb(70, 146, 136);">Pavin</span> = <span style="color:rgb(171, 75, 184)">new</span> <span style="color: rgb(211, 61, 35);">WebDeveloper</span>(
+                <span  style="color: rgb(117, 36, 47);">"Pavin"</span>, 
+                <span style="color: rgb(117, 36, 47);">"Mathew"</span>, 
+                { 
+                    <span>frontEnd</span>: [<span style="color: rgb(117, 36, 47);">"HTML"</span>, <span style="color: rgb(117, 36, 47)">"CSS"</span>, <span style="color: rgb(117, 36, 47);">"JS"</span>, <span style="color: rgb(117, 36, 47);">"React"</span>], 
+                    <span>backEnd</span>: [<span style="color: rgb(117, 36, 47);">"Node"</span>, <span style="color: rgb(117, 36, 47);">"Express"</span>, <span style="color: rgb(117, 36, 47);">"MongoDB"</span>, <span style="color: rgb(117, 36, 47);">"Firebase"</span>, <span style="color: rgb(117, 36, 47);">"PostgreSQL"</span>]
+                },
+            )
+        </code>
+      </pre>
+        </div>
+        <div class="top-text">
+          <h1>Hey. I'm Pavin Mathew. 🦥</h1>
+          <h2>I code web apps.</h2>
+          <a id="learn-more-button">Learn more about me.</a>
+        </div>
+      </div>
+      <div id="projects">
+        <!-- PicrossO - Online Multiplayer Picross
+      MeTube - Upload your best moments to share with your friends!
+      Animal Crossing Trading Club -  Trade your extra furniture for something more.
+      Recipe Disaster - Can't decide on dinner? No problem!
+      Looking for more? - Check out my Codepen! -->
+        <div id="see-more">
+          <div class="text">
+            <h1>Other Projects</h1>
+
+            <a href="https://www.codepen.io/pvmathew" target="_blank">
+              <div class="image" style="top: 100px; right: 80px">
+                <img
+                  src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png"
+                  alt="codepen icon"
+                  srcset=""
+                />
+              </div>
+            </a>
+            <a href="https://github.com/pvmathew" target="_blank">
+              <div class="image" style="top: 210px; right: 80px">
+                <img
+                  src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"
+                  alt="github icon"
+                  srcset=""
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div id="recipe">
+          <img class="darken" src="./assets/recipes.PNG" />
+          <div class="description hide">
+            <div style="left: 45%">
+              <div class="head">
+                <h1>Recipe Disaser</h1>
+                <a
+                  class="project-button"
+                  href="evening-depths-14766.herokuapp.com"
+                  target="_blank"
+                  >&#60;&#47;&#62;</a
+                >
+              </div>
+
+              <div class="desc">
+                Can't decide on what to make for dinner? Let this recipe
+                searching app decide for you!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="trading-club">
+          <img class="darken" src="./assets/nhtc2.png" />
+          <div class="description hide">
+            <div style="left: 35%">
+              <div class="head">
+                <h1>New Horizons Trading Club</h1>
+                <a
+                  class="project-button"
+                  href="evening-depths-14766.herokuapp.com"
+                  target="_blank"
+                  >&#60;&#47;&#62;</a
+                >
+              </div>
+
+              <div class="desc">
+                List your extra items up for sale on this Animal Crossing: New
+                Horizons web portal.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="metube">
+          <img class="darken" src="./assets/metube2.png" />
+          <div class="description hide">
+            <div style="left: 25%">
+              <div class="head">
+                <h1>MeTube</h1>
+                <a
+                  class="project-button"
+                  href="evening-depths-14766.herokuapp.com"
+                  target="_blank"
+                  >&#60;&#47;&#62;</a
+                >
+              </div>
+
+              <div class="desc">
+                Upload and search videos through this YouTube look-a-like.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="picrosso">
+          <img src="./assets/picrosso1.png" />
+
+          <div class="description">
+            <div class="head">
+              <h1>PicrossO</h1>
+              <a
+                class="project-button"
+                href="https://evening-depths-14766.herokuapp.com"
+                target="_blank"
+                >View Demo</a
+              >
+              <a
+                class="project-button"
+                href="evening-depths-14766.herokuapp.com"
+                target="_blank"
+                >&#60;&#47;&#62;</a
+              >
+            </div>
+
+            <div class="desc">Play Picross Online with your friends!</div>
+          </div>
+        </div>
+      </div>
+      <div id="contact">
+        <h1>Get in touch.</h1>
+        <form id="contact-form">
+          <div class="left-side">
+            <label for="name-input">Name *</label>
+            <input type="text" id="name-input" name="name" />
+
+            <label for="email-input">Email *</label>
+            <input type="text" id="email-input" name="email" />
+
+            <label for="phone-input">Phone Number</label>
+            <input type="text" id="phone-input" name="phone" />
+          </div>
+          <div class="right-side">
+            <label for="message-textarea" class="message-label">Message</label>
+            <textarea
+              id="message-textarea"
+              name="message"
+              style="height: 200px"
+            ></textarea>
+
+            <input
+              class="submit-button"
+              type="submit"
+              value="Send"
+              style="cursor: pointer"
+            />
+          </div>
+        </form>
+      </div>
+      <footer></footer>
+    </div>
+    <div id="about">
+      <div class="image">
+        <img src="/assets/about_pic.jpg" alt="Photo of " srcset="" />
+      </div>
+      <div class="text">
+        <h2>Who am I?</h2>
+        <p>Hi there! My name is Pavin.</p>
+        <p>
+          I'm a self-taught web developer with years of experience designing and
+          developing scalable websites.
+        </p>
+        <p>
+          I first started my web development journey on freecodecamp.org, and
+          have since designed a wide variety of both front-end and full-stack
+          applications using React and Express.
+        </p>
+        <p>
+          I particularly enjoy tinkering with different third-party modules and
+          frameworks to engineer and implement innovative and robust design
+          solutions for my apps.
+        </p>
+        <p>
+          <a
+            style="text-decoration: none"
+            href="./assets/2020-resume.pdf"
+            target="_blank"
+            >See my resume.</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

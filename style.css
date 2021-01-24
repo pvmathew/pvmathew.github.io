@@ -1,0 +1,379 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+#container {
+  left: 0;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+#container.push-left {
+  transform: translateX(-300px);
+}
+
+#container-overlay {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: visibility 0.3s, opacity 0.3s ease-out;
+}
+
+#container-overlay.activate {
+  visibility: visible;
+  opacity: 1;
+}
+
+#about {
+  display: block;
+  background-color: white;
+  position: fixed;
+  right: -300px;
+  top: 0;
+  height: 100vh;
+  width: 300px;
+  z-index: 10;
+  transition: all 0.5s ease;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+#about.show {
+  right: 0;
+}
+
+#about .image {
+  text-align: center;
+  margin-bottom: 0.5em;
+  padding-bottom: 2em;
+  border-bottom: solid 1px rgb(233, 233, 233);
+}
+
+#about img {
+  width: 150px;
+  border: solid 1px lightgray;
+}
+
+nav {
+  text-align: right;
+  padding: 1.5em;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-link {
+  margin: 0 20px;
+  text-decoration: none;
+  color: rgb(83, 83, 83);
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-link:after {
+  content: "";
+  left: 0;
+  height: 3px;
+  background-color: rgb(20, 20, 20);
+  display: block;
+  margin-top: 5px;
+  width: 0;
+  transition: width 0.2s ease;
+
+  /* width: 0;
+  height: 3px;
+  margin-top: 5px;
+  right: 0;
+  background: rgb(0, 0, 0);
+  -webkit-transition: width 0.2s ease; */
+}
+
+.nav-link:hover:after {
+  width: 100%;
+  right: 0;
+  background-color: rgb(20, 20, 20);
+}
+
+.nav-link:hover {
+  color: rgb(20, 20, 20);
+}
+
+.lang {
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgb(83, 83, 83);
+}
+
+#top {
+  margin: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.top-text h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.top-text a {
+  border: solid black 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+  width: 150px;
+  display: block;
+  margin: 25px 0;
+  cursor: pointer;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+  /* font-family: "Source Code Pro", monospace;
+  font-size: 0.9em ; */
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+#learn-more-button {
+  transition: box-shadow 0.2s cubic-bezier(0.25, 0.73, 0.9, 1);
+}
+
+#learn-more-button:hover {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+#projects {
+  height: 800px;
+  max-height: 800px;
+  background-color: blue;
+  position: relative;
+  margin: 2em 1em;
+}
+
+#projects div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
+
+#projects div .description {
+  background-color: inherit;
+  color: white;
+  bottom: 0;
+  left: 0;
+  top: 650px;
+  position: absolute;
+}
+
+#projects div .description.hide {
+  transform: translateY(100%);
+}
+
+#projects div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+#projects div img.darken {
+  opacity: 0.5;
+}
+
+/* text in project desc */
+
+#projects div .description .head {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  margin-left: 20px;
+  margin-top: 15px;
+  border-bottom: solid 1px white;
+}
+#projects div .description .desc {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  margin-left: 25px;
+  margin-top: 70px;
+}
+.project-button {
+  border: solid white 1px;
+  color: white;
+  border-radius: 5px;
+  padding: 4px;
+  width: auto;
+  display: block;
+  margin: 25px 0;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+#picrosso {
+  background-color: goldenrod;
+  clip-path: polygon(0 0, 45% 0, 65% 100%, 0 100%);
+}
+#picrosso img {
+  height: 100%;
+  object-fit: cover;
+  object-position: -350px -60px;
+}
+
+#metube {
+  background-color: darkseagreen;
+  clip-path: polygon(0 0, 55% 0, 75% 100%, 0 100%);
+}
+
+#metube img {
+  object-position: -150px -60px !important;
+}
+
+#trading-club {
+  background-color: rgb(33, 142, 156);
+  clip-path: polygon(0 0, 65% 0, 85% 100%, 0 100%);
+}
+
+#trading-club img {
+  object-position: 50px -60px !important;
+}
+
+#recipe {
+  background-color: rgb(172, 60, 56);
+  /* clip-path: polygon(0 0, 50% 0, 75% 100%, 0 100%); */
+  clip-path: polygon(0 0, 75% 0, 95% 100%, 0 100%);
+}
+
+#recipe img {
+  object-fit: contain !important;
+  object-position: 400px 0;
+}
+
+#see-more {
+  background-color: rgb(49, 49, 49);
+  text-align: right;
+}
+
+#see-more .text {
+  color: white;
+  position: absolute;
+  width: 100%;
+  padding-right: 40px;
+  padding-top: 20px;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+#see-more .text img {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+#see-more p {
+  cursor: pointer;
+  display: inline;
+  right: 0;
+}
+
+#see-more .text div {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#contact {
+  margin-top: 2em;
+  left: 0;
+  right: 0;
+  min-height: 500px;
+  background-color: rgb(20, 20, 20);
+  position: absolute;
+  color: white;
+  padding: 2em 3em;
+}
+
+#contact form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+#contact div {
+  width: 450px;
+  margin: 0 50px;
+}
+
+#contact .left-side {
+  padding-top: 20px;
+}
+
+#contact input,
+textarea {
+  display: block;
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 100%;
+  min-height: 20px;
+  box-sizing: border-box;
+  min-height: 38px;
+}
+
+.submit-button {
+  padding: 0.5em;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+@media only screen and (max-width: 1200px) {
+  #contact div {
+    width: 100%;
+    margin: 0 20px;
+  }
+}
