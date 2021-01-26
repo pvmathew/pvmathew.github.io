@@ -18,10 +18,10 @@
     <div id="container">
       <div id="container-overlay"></div>
       <nav>
+        <a id="menu-button" onclick="openMenu()"
+          >Menu <i class="arrow down"></i
+        ></a>
         <ul>
-          <li>
-            <a class="menu-button">Menu <i class="arrow down"></i></a>
-          </li>
           <li><a class="nav-link" id="top-link" href="#top">Top</a></li>
           <li>
             <a class="nav-link" id="projects-link" href="#projects">Projects</a>
@@ -34,13 +34,12 @@
               >Resume</a
             >
           </li>
-
-          <li>
-            <a class="lang jp" href="#about">日本語</a>
-            <span style="color: gray">|</span>
-            <a class="lang en active" href="#about">English</a>
-          </li>
         </ul>
+        <div class="langs">
+          <a class="lang jp" href="#about">日本語</a>
+          <span style="color: gray">|</span>
+          <a class="lang en active" href="#about">English</a>
+        </div>
       </nav>
       <div id="top">
         <div class="top-image">

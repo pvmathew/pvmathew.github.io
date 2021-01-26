@@ -5,6 +5,10 @@ $(document).ready(function () {
   handleContactSubmit();
 });
 
+const openMenu = () => {
+  $("nav").toggleClass("responsive");
+}
+
 const handleContactSubmit = () => {
   $("#contact-form").submit((e) => {
     e.preventDefault();

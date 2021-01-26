@@ -72,6 +72,7 @@ body.no-scroll {
 nav {
   text-align: right;
   padding: 1.5em;
+  min-height: 20px;
 }
 
 nav ul {
@@ -116,8 +117,13 @@ nav ul {
   text-decoration: none;
   color: rgb(83, 83, 83);
 }
+.langs {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
 
-.menu-button {
+#menu-button {
   display: none;
 }
 
@@ -125,17 +131,17 @@ nav ul {
   li .nav-link {
     display: none;
   }
-  .menu-button {
-    margin: 0 20px;
+  #menu-button {
+    margin: 0 10px;
     text-decoration: none;
     color: rgb(83, 83, 83);
     float: left;
-    position: relative;
+    position: absolute;
     cursor: pointer;
-    display: inline-block;
+    display: block;
     border: solid 1px gray;
     border-radius: 5px;
-    padding: 0 15px;
+    padding: 5px 15px;
     /* top: -5px; */
   }
 
@@ -151,10 +157,30 @@ nav ul {
   .down {
     transform: rotate(45deg);
   }
-  
-  li {
-    /* height: 50px; */
-    line-height: 35px;
+
+  .langs {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  nav.responsive {
+    position: relative;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  nav.responsive .nav-link {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  nav.responsive ul {
+    margin-top: 50px;
+  }
+
+  nav.responsive li {
+    line-height: 30px;
   }
 }
 
