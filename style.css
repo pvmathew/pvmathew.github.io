@@ -99,13 +99,6 @@ nav ul {
   margin-top: 5px;
   width: 0;
   transition: width 0.2s ease;
-
-  /* width: 0;
-  height: 3px;
-  margin-top: 5px;
-  right: 0;
-  background: rgb(0, 0, 0);
-  -webkit-transition: width 0.2s ease; */
 }
 
 .nav-link:hover:after {
@@ -122,6 +115,47 @@ nav ul {
   margin: 0 10px;
   text-decoration: none;
   color: rgb(83, 83, 83);
+}
+
+.menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  li .nav-link {
+    display: none;
+  }
+  .menu-button {
+    margin: 0 20px;
+    text-decoration: none;
+    color: rgb(83, 83, 83);
+    float: left;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 0 15px;
+    /* top: -5px; */
+  }
+
+  .arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+  }
+
+  .down {
+    transform: rotate(45deg);
+  }
+  
+  li {
+    /* height: 50px; */
+    line-height: 35px;
+  }
 }
 
 #top {
