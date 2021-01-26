@@ -40,11 +40,11 @@ body.no-scroll {
 }
 
 #about {
-  display: block;
   background-color: white;
   position: fixed;
-  right: -300px;
+  transform: translateX(300px);
   top: 0;
+  right: 0;
   height: 100vh;
   width: 300px;
   z-index: 10;
@@ -54,7 +54,7 @@ body.no-scroll {
 }
 
 #about.show {
-  right: 0;
+  transform: translateX(0);
 }
 
 #about .image {
@@ -222,7 +222,7 @@ h2 {
   height: 50px;
   display: flex;
   align-items: center;
-  width: 600px;
+  max-width: 600px;
   margin-left: 20px;
   margin-top: 15px;
   border-bottom: solid 1px white;
@@ -231,7 +231,7 @@ h2 {
   height: 50px;
   display: flex;
   align-items: center;
-  width: 600px;
+  max-width: 600px;
   margin-left: 25px;
   margin-top: 70px;
 }
@@ -374,6 +374,6 @@ textarea {
 @media only screen and (max-width: 1200px) {
   #contact div {
     width: 100%;
-    margin: 0 20px;
+    margin: 0 0;
   }
 }
