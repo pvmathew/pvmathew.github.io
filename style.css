@@ -190,6 +190,11 @@ nav ul {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  padding: 10px;
+}
+
+.top-text {
+  padding: 10px;
 }
 
 .top-text h1,
@@ -208,11 +213,28 @@ h2 {
   cursor: pointer;
 }
 
-pre {
+pre,
+code {
   padding: 0;
   margin: 0;
   /* font-family: "Source Code Pro", monospace;
   font-size: 0.9em ; */
+}
+
+@media screen and (max-width: 600px) {
+  pre,
+  code {
+    font-size: 0.5em;
+  }
+
+  .top-text {
+    text-align: center;
+  }
+
+  #top a {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .show {
