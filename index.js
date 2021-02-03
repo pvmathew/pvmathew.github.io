@@ -54,12 +54,15 @@ const sendEmail = (name, email, phone, message) => {
 
 const scrollFromNavLinks = () => {
   $('a[href*="#"]').on("click", function (e) {
-    let topPosition = $($(this).attr("href")).offset().top;
-    console.log(topPosition);
-    let animationDuration = topPosition > 500 ? 1000 : 500;
+    let div = $($(this).attr("href"));
+    let topPosition =
+      div[0].id === "contact"
+        ? $(document).height() - $(window).height()
+        : div.offset().top - 20;
+    let animationDuration = topPosition > 500 ? 800 : 500;
     $("html").animate(
       {
-        scrollTop: topPosition - 20,
+        scrollTop: topPosition,
       },
       animationDuration,
       "swing"
