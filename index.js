@@ -1,22 +1,9 @@
 $(document).ready(function () {
-  $(window).on("resize", function (e) {
-    checkScreenSize();
-  });
-
-  checkScreenSize();
   scrollFromNavLinks();
   slideAboutFromRight();
   slideProjectsOnHover();
   handleContactSubmit();
 });
-
-const checkScreenSize = () => {
-  if (window.outerWidth < 600) {
-    $("#projects").addClass("responsive");
-  } else {
-    $("#projects").removeClass("responsive");
-  }
-};
 
 const openMenu = () => {
   $("nav").toggleClass("responsive");
@@ -97,73 +84,89 @@ const slideAboutFromRight = () => {
 };
 
 const slideProjectsOnHover = () => {
-  $("#projects").mouseleave(() => {
-    $("#picrosso div").removeClass("hide");
-    $("#picrosso img").removeClass("darken");
+  $("#projects").on("mouseover", "div.project", (event) => {
+    let target = event.target.id;
+    switch (target) {
+      case "picrosso":
+        $("#picrosso div").removeClass("hide");
+        $("#picrosso img").removeClass("darken");
+        break;
+      case "metube":
+        $("#picrosso").css("clip-path", "polygon(0 0, 5% 0, 25% 100%, 0 100%)");
+        $("#picrosso img").addClass("darken");
+        $("#picrosso div").addClass("hide");
+        $("#metube div").removeClass("hide");
+        $("#metube img").removeClass("darken");
+        break;
+      case "trading-club":
+        $("#picrosso div").addClass("hide");
+        $("#picrosso img").addClass("darken");
+        $("#metube img").addClass("darken");
+        $("#metube div").addClass("hide");
+        $("#trading-club div").removeClass("hide");
+        $("#trading-club img").removeClass("darken");
+        $("#picrosso").css("clip-path", "polygon(0 0, 5% 0, 25% 100%, 0 100%)");
+        $("#metube").css("clip-path", "polygon(0 0, 15% 0, 35% 100%, 0 100%)");
+        break;
+      case "recipe":
+        $("#recipe div").removeClass("hide");
+        $("#recipe img").removeClass("darken");
+        $("#picrosso div").addClass("hide");
+        $("#picrosso img").addClass("darken");
+        $("#metube img").addClass("darken");
+        $("#metube div").addClass("hide");
+        $("#trading-club img").addClass("darken");
+        $("#trading-club div").addClass("hide");
+        $("#picrosso").css("clip-path", "polygon(0 0, 5% 0, 25% 100%, 0 100%)");
+        $("#metube").css("clip-path", "polygon(0 0, 15% 0, 35% 100%, 0 100%)");
+        $("#trading-club").css(
+          "clip-path",
+          "polygon(0 0, 25% 0, 45% 100%, 0 100%)"
+        );
+        break;
+    }
   });
 
-  $("#picrosso").mouseover(() => {
-    $("#picrosso div").removeClass("hide");
-    $("#picrosso img").removeClass("darken");
-  });
-
-  $("#metube").mouseover(() => {
-    // $("#picrosso").css(
-    //   "clip-path",
-    //   "polygon(0 0, 100% 0, 100% 10%, 0 10%)"
-    // );
-    $("#picrosso").css("clip-path", "polygon(0 0, 5% 0, 25% 100%, 0 100%)");
-    $("#picrosso img").addClass("darken");
-    $("#picrosso div").addClass("hide");
-    $("#metube div").removeClass("hide");
-    $("#metube img").removeClass("darken");
-  });
-
-  $("#metube").mouseleave(() => {
-    $("#picrosso").css("clip-path", "polygon(0 0, 45% 0, 65% 100%, 0 100%)");
-    $("#metube div").addClass("hide");
-    $("#metube img").addClass("darken");
-  });
-
-  $("#trading-club").mouseover(() => {
-    $("#picrosso div").addClass("hide");
-    $("#picrosso img").addClass("darken");
-    $("#trading-club div").removeClass("hide");
-    $("#trading-club img").removeClass("darken");
-    $("#picrosso").css("clip-path", "polygon(0 0, 5% 0, 25% 100%, 0 100%)");
-    $("#metube").css("clip-path", "polygon(0 0, 15% 0, 35% 100%, 0 100%)");
-  });
-
-  $("#trading-club").mouseleave(() => {
-    $("#trading-club div").addClass("hide");
-    $("#trading-club img").addClass("darken");
-    $("#picrosso").css("clip-path", "polygon(0 0, 45% 0, 65% 100%, 0 100%)");
-    $("#metube").css("clip-path", "polygon(0 0, 55% 0, 75% 100%, 0 100%)");
-  });
-
-  $("#recipe").mouseover(() => {
-    $("#recipe div").removeClass("hide");
-    $("#recipe img").removeClass("darken");
-    $("#picrosso div").addClass("hide");
-    $("#picrosso img").addClass("darken");
-    $("#picrosso").css("clip-path", "polygon(0 0, 5% 0, 25% 100%, 0 100%)");
-    $("#metube").css("clip-path", "polygon(0 0, 15% 0, 35% 100%, 0 100%)");
-    $("#trading-club").css(
-      "clip-path",
-      "polygon(0 0, 25% 0, 45% 100%, 0 100%)"
-    );
-  });
-
-  $("#recipe").mouseleave(() => {
-    $("#recipe div").addClass("hide");
-    $("#recipe img").addClass("darken");
-    $("#picrosso div").removeClass("hide");
-    $("#picrosso img").removeClass("darken");
-    $("#picrosso").css("clip-path", "polygon(0 0, 45% 0, 65% 100%, 0 100%)");
-    $("#metube").css("clip-path", "polygon(0 0, 55% 0, 75% 100%, 0 100%)");
-    $("#trading-club").css(
-      "clip-path",
-      "polygon(0 0, 65% 0, 85% 100%, 0 100%)"
-    );
+  $("#projects").on("mouseleave", "div.project", (event) => {
+    let target = event.target.id;
+    switch (target) {
+      case "picrosso":
+      case "metube":
+        $("#metube div").addClass("hide");
+        $("#metube img").addClass("darken");
+        $("#picrosso div").removeClass("hide");
+        $("#picrosso img").removeClass("darken");
+        $("#picrosso").css(
+          "clip-path",
+          "polygon(0 0, 45% 0, 65% 100%, 0 100%)"
+        );
+        break;
+      case "trading-club":
+        $("#trading-club div").addClass("hide");
+        $("#trading-club img").addClass("darken");
+        $("#picrosso div").removeClass("hide");
+        $("#picrosso img").removeClass("darken");
+        $("#picrosso").css(
+          "clip-path",
+          "polygon(0 0, 45% 0, 65% 100%, 0 100%)"
+        );
+        $("#metube").css("clip-path", "polygon(0 0, 55% 0, 75% 100%, 0 100%)");
+        break;
+      case "recipe":
+        $("#recipe div").addClass("hide");
+        $("#recipe img").addClass("darken");
+        $("#picrosso div").removeClass("hide");
+        $("#picrosso img").removeClass("darken");
+        $("#picrosso").css(
+          "clip-path",
+          "polygon(0 0, 45% 0, 65% 100%, 0 100%)"
+        );
+        $("#metube").css("clip-path", "polygon(0 0, 55% 0, 75% 100%, 0 100%)");
+        $("#trading-club").css(
+          "clip-path",
+          "polygon(0 0, 65% 0, 85% 100%, 0 100%)"
+        );
+        break;
+    }
   });
 };
