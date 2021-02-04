@@ -354,7 +354,7 @@ h2 {
   padding-top: 20px;
 }
 
-#contact input,
+input,
 textarea {
   display: block;
   padding: 0.5em;
@@ -365,6 +365,7 @@ textarea {
   min-height: 20px;
   box-sizing: border-box;
   min-height: 38px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .submit-button {
