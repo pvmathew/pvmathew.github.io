@@ -30,15 +30,19 @@
             <a class="nav-link" id="contact-link" href="#contact">Contact</a>
           </li>
           <li>
-            <a class="nav-link" href="/assets/2020-resume.pdf" target="_blank"
+            <a
+              class="nav-link"
+              id="resume-link"
+              href="/assets/2020-resume.pdf"
+              target="_blank"
               >Resume</a
             >
           </li>
         </ul>
         <div class="langs">
-          <a class="lang jp" href="#about">日本語</a>
+          <a class="lang jp" onclick="setLanguage('ja')">日本語</a>
           <span style="color: gray">|</span>
-          <a class="lang en active" href="#about">English</a>
+          <a class="lang en" onclick="setLanguage('en')">English</a>
         </div>
       </nav>
       <div id="top">
@@ -64,7 +68,7 @@
 </code>
 </pre>
         </div>
-        <div class="top-text">
+        <div id="top-text">
           <h1>Hey. I'm Pavin Mathew. 🦥</h1>
           <h2>I code web apps.</h2>
           <a id="learn-more-button">Learn more about me.</a>
@@ -78,6 +82,7 @@
             <div class="head">
               <h1>PicrossO</h1>
               <a
+                id="demo-button"
                 class="project-button"
                 href="https://evening-depths-14766.herokuapp.com"
                 target="_blank"
@@ -161,7 +166,7 @@
             <h1>Other Projects</h1>
 
             <a href="https://www.codepen.io/pvmathew" target="_blank">
-              <div id="codepen" class="image" style="top: 100px; right: 80px">
+              <div id="codepen" class="image" style="top: 120px; right: 80px">
                 <img
                   src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png"
                   alt="codepen icon"
@@ -170,7 +175,7 @@
               </div>
             </a>
             <a href="https://github.com/pvmathew" target="_blank">
-              <div id="github" class="image" style="top: 210px; right: 80px">
+              <div id="github" class="image" style="top: 230px; right: 80px">
                 <img
                   src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"
                   alt="github icon"

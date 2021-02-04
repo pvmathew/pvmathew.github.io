@@ -1,9 +1,36 @@
 $(document).ready(function () {
+  loadLanguage();
   scrollFromNavLinks();
   slideAboutFromRight();
   slideProjectsOnHover();
   handleContactSubmit();
 });
+
+const loadLanguage = () => {
+  localStorage.getItem("language") == null ? setLanguage("en") : false;
+  $.ajax({
+    url: "/lang/" + localStorage.getItem("language") + ".json",
+    dataType: "json",
+    success: (language) => {
+      $("#top-link").text(language["top-link"]);
+      $("#projects-link").text(language["projects-link"]);
+      $("#contact-link").text(language["contact-link"]);
+      $("#resume-link").text(language["resume-link"]);
+
+      $("#top-text h1").text(language["top-head"]);
+      $("#top-text h2").text(language["top-flavor"]);
+      $("#top-text a").text(language["learn-more-button"]);
+
+      $("#demo-button").text(language["view-demo"]);
+      $("#see-more div h1").text(language["other-projects"]);
+    },
+  });
+};
+
+const setLanguage = (lang) => {
+  localStorage.setItem("language", lang);
+  window.location.reload();
+};
 
 const openMenu = () => {
   $("nav").toggleClass("responsive");

@@ -115,6 +115,7 @@ nav ul {
   margin: 0 10px;
   text-decoration: none;
   color: rgb(83, 83, 83);
+  cursor: pointer;
 }
 .langs {
   position: absolute;
@@ -135,13 +136,13 @@ nav ul {
   padding: 15px;
 }
 
-.top-text h1,
+#top-text h1,
 h2 {
   padding: 0;
   margin: 0;
 }
 
-.top-text a {
+#top-text a {
   border: solid black 1px;
   border-radius: 5px;
   padding: 0.5em;
@@ -174,6 +175,7 @@ h2 {
 
 #learn-more-button {
   transition: box-shadow 0.2s cubic-bezier(0.25, 0.73, 0.9, 1);
+  text-align: center;
 }
 
 #learn-more-button:hover {
@@ -301,17 +303,24 @@ h2 {
 #see-more .text {
   color: white;
   position: absolute;
-  width: 100%;
-  padding-right: 40px;
+  width: 300px;
+  margin-left: auto;
+  padding-right: 20px;
   padding-top: 20px;
   text-align: right;
   box-sizing: border-box;
+  text-align: center;
 }
 
-#see-more .text img {
+#see-more .image {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+#see-more .image:hover {
+  transform: scale(1.05);
 }
 
 #see-more p {
@@ -383,6 +392,16 @@ textarea {
     width: 100%;
     margin: 0 0;
   }
+
+  #see-more .text {
+    width: 200px;
+    padding-top: 5px;
+    padding-right: 5px;
+  }
+
+  #see-more .image {
+    right: 50px !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -442,14 +461,13 @@ textarea {
     line-height: 30px;
   }
 
-  /* top */
-  .top-text {
-    text-align: center;
-  }
-
   #top a {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #top-text {
+    text-align: center;
   }
 
   /* projects */
@@ -525,6 +543,8 @@ textarea {
   #see-more .text {
     text-align: center !important;
     padding: 10px 20px;
+    margin-right: auto;
+    width: 100%;
   }
 
   #see-more .image {
