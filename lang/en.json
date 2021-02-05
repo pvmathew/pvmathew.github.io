@@ -7,5 +7,20 @@
   "top-flavor": "I code web apps.",
   "learn-more-button": "Learn more about me.",
   "view-demo": "View Demo",
-  "other-projects": "Other Projects"
+  "other-projects": "Other Projects",
+  "get-in-touch": "Get in touch.",
+  "name": "Name *",
+  "email": "Email Address *",
+  "phone-number": "Phone Number",
+  "message": "Message",
+  "send": "Send",
+  "picrosso": "Play Picross Online with your friends!",
+  "metube": "Upload and search videos through this YouTube look-a-like.",
+  "nhtc": "List your extra items up for sale on this Animal Crossing: New Horizons web portal.",
+  "recipe": "Can't decide on what to make for dinner? Let this recipe searching app decide for you!",
+  "who-am-i": "Who am I?",
+  "about-1": "Hi there! My name is Pavin.",
+  "about-2": "I'm a self-taught web developer with years of experience designing and developing scalable websites.",
+  "about-3": "I first started my web development journey on freecodecamp.org, and have since designed a wide variety of both front-end and full-stack applications using React and Express.",
+  "see-my-resume": "See my resume."
 }

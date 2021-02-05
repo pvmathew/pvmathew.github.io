@@ -235,7 +235,7 @@ h2 {
   height: 50px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 650px;
   margin-left: 25px;
   margin-top: 70px;
 }
@@ -388,6 +388,9 @@ textarea {
 }
 
 @media only screen and (max-width: 1200px) {
+  #projects div .description .desc {
+    width: 350px;
+  }
   #contact div {
     width: 100%;
     margin: 0 0;

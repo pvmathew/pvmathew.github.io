@@ -23,6 +23,24 @@ const loadLanguage = () => {
 
       $("#demo-button").text(language["view-demo"]);
       $("#see-more div h1").text(language["other-projects"]);
+
+      $("#contact h1").text(language["get-in-touch"]);
+      $("label[for='name-input']").text(language["name"]);
+      $("label[for='email-input']").text(language["email"]);
+      $("label[for='phone-input']").text(language["phone-number"]);
+      $("label[for='message-textarea']").text(language["message"]);
+      $("input.submit-button").val(language["send"]);
+
+      $("#picrosso div.desc").text(language["picrosso"]);
+      $("#metube div.desc").text(language["metube"]);
+      $("#trading-club div.desc").text(language["nhtc"]);
+      $("#recipe div.desc").text(language["recipe"]);
+
+      $("#about h2").text(language["who-am-i"]);
+      $("#about-1").text(language["about-1"]);
+      $("#about-2").text(language["about-2"]);
+      $("#about-3").text(language["about-3"]);
+      $("#about a").text(language["see-my-resume"]);
     },
   });
 };
