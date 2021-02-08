@@ -290,11 +290,6 @@ h2 {
   z-index: 1;
 }
 
-#recipe img {
-  object-fit: contain !important;
-  object-position: 400px 0;
-}
-
 #see-more {
   background-color: rgb(49, 49, 49);
   text-align: right;
@@ -389,8 +384,13 @@ textarea {
 
 @media only screen and (max-width: 1200px) {
   #projects div .description .desc {
-    width: 350px;
+    max-width: 350px;
   }
+
+  #projects .head h1 {
+    font-size: 1.5em;
+  }
+
   #contact div {
     width: 100%;
     margin: 0 0;
@@ -407,7 +407,7 @@ textarea {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   /* nav-related */
   li .nav-link {
     display: none;
@@ -480,6 +480,9 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
   }
 
   #projects .project {
@@ -489,6 +492,8 @@ textarea {
     position: relative;
     margin-bottom: 10px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   #projects div.description {
@@ -501,17 +506,20 @@ textarea {
     height: 120px;
   }
 
-  #projects div img {
+  #picrosso img {
     object-fit: cover;
-    object-position: -80px 0;
+    object-position: -100px 0;
   }
-
-  #projects h1 {
-    font-size: 1em;
+  #metube img {
+    object-position: -100px 0 !important;
   }
 
   #trading-club img {
-    object-position: -150px -20px !important;
+    object-position: -120px -50px !important;
+  }
+
+  #projects h1 {
+    font-size: 1em !important;
   }
 
   #recipe img {
