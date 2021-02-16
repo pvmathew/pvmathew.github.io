@@ -21,7 +21,7 @@ const loadLanguage = () => {
       $("#top-text h2").text(language["top-flavor"]);
       $("#top-text a").text(language["learn-more-button"]);
 
-      $("#demo-button").text(language["view-demo"]);
+      $(".demo-button").text(language["view-demo"]);
       $("#see-more div h1").text(language["other-projects"]);
 
       $("#contact h1").text(language["get-in-touch"]);
