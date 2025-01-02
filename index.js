@@ -40,7 +40,7 @@ const loadLanguage = () => {
       $("#about-1").text(language["about-1"]);
       $("#about-2").text(language["about-2"]);
       $("#about-3").text(language["about-3"]);
-      $("#about a").text(language["see-my-resume"]);
+      $("#about-4").text(language["see-my-work"]);
     },
   });
 };

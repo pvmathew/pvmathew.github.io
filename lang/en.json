@@ -21,6 +21,7 @@
   "who-am-i": "Who am I?",
   "about-1": "Hi there! My name is Pavin.",
   "about-2": "I'm a self-taught web developer with years of experience designing and developing scalable websites.",
-  "about-3": "I first started my web development journey on freecodecamp.org, and have since designed a wide variety of both front-end and full-stack applications using React and Express.",
-  "see-my-resume": "See my resume."
+  "about-3": "I first started my web development journey on freecodecamp.org, and have since designed a wide variety of both front-end and full-stack applications using React and Rails.",
+  "see-my-resume": "See my resume.",
+  "see-my-work": "Check out some of my work!"
 }
